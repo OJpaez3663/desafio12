@@ -1,0 +1,616 @@
+header{
+    background-color: #201e1f;
+}
+
+nav{
+    background-color: #67beae;
+    height: 20px;
+    color: #201e1f;
+    font-size: 15px;
+    
+}
+
+li{
+    color: rgb(27, 27, 27);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    list-style-type: symbols();
+    list-style-position: inside;
+}
+
+fieldset{
+    color: hotpink;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    text-align: left;
+    text-transform: capitalize;
+    background-color: #201e1f;
+    
+}
+
+    .estiloUno{
+color: #67beae;
+font-size: 15px;
+font-family: 'Montserrat', sans-serif;
+text-align: justify;
+text-decoration: overline;
+    }
+
+    footer{
+        background-color: #201e1f;
+        background-image: url(molde.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 150px;
+
+    }
+
+    body{
+        background-image: url(fondo-blanco.jpg);
+    }
+
+    /* Flexbox */
+
+    #navegadorFlexible{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    #piePaginaFlexible{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #imagenLogo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+
+    /* Grids */
+
+
+    #grilla{
+        display: grid;
+        height: 500px;
+        grid-template-columns: 70% 30% ;
+        grid-template-rows: 10% 3% 87%  ;
+       
+       
+
+    }
+
+    #subTitulo{
+        font-size: 20px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+
+    #imagenDiseño{
+        max-width: 100%;
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+    }
+
+    #textoLorem{
+        font-size: 18px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+    }
+
+    @media only screen and ( max-width: 768px ){
+
+        #grilla{
+            height: 200px;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 10% 3% 87%  ;
+           
+           
+    
+        }
+
+        #navegadorFlexible{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+    
+        }
+
+        #textoLorem{ 
+            font-size: 10px;
+
+            #subTitulo{
+                font-size: 12px;
+            }
+
+            nav{
+                    background-color: #67beae;
+                    height: 40px;
+                    color: #201e1f;
+                    font-size: 11px;
+                }
+
+                header{
+                    background-color: #201e1f;
+                    height: 20px;
+                }
+
+        }
+    }
+
+/* grid contenidos */
+
+#grillaClasif{
+    height: 1600px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 20% 20% 20% 40%;
+    grid-template-areas:  "bloque1 bloque2 bloque3"
+                          "bloque4 bloque5 bloque6"
+                          "bloque4 bloque8 bloque9"
+                          "cuadro1 cuadro2 cuadro3";
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+}
+    
+   
+    /* iconos */
+
+  
+    
+    i{ 
+        font-size: 30px;
+        color: lightgrey;
+        height: 40px;
+    }
+
+    /* BEM bloques */
+
+    .cardUno{
+        background-color: #201e1f;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 0%;
+        
+
+        &__subtituloTexto{
+            font-style: oblique;
+            font-size: 20px; 
+            text-align: center;  
+        }
+
+        &__imagenEvent{
+            width: 100%;
+            height: auto;
+            align-items: center;
+        }
+
+        &__contenido{
+            background-color: #67beae;
+        }
+
+        &__lista{
+            list-style-type: none;
+            display: flex;
+            background-color: rgb(148, 147, 147);
+        }
+
+        &item{
+            color: rgb(242, 243, 243);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        &parrafo{
+            color: rgb(238, 238, 238);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+
+
+
+    .cardDos{
+        background-color: #201e1f;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 0%;
+        
+
+        &__subtituloTexto{
+            font-style: oblique;
+            font-size: 20px; 
+            text-align: center;  
+        }
+
+        &__imagenEvent{
+            width: 100%;
+            height: auto;
+        }
+
+        &__contenido{
+            background-color: #67beae;
+        }
+
+        &__lista{
+            list-style-type: none;
+            display: flex;
+            background-color: rgb(148, 147, 147);
+        }
+
+        &item{
+            color: rgb(242, 243, 243);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        &parrafo{
+            color: rgb(238, 238, 238);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+
+    .cardTres{
+        background-color: #201e1f;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 0%;
+        
+
+        &__subtituloTexto{
+            font-style: oblique;
+            font-size: 20px; 
+            text-align: center;  
+        }
+
+        &__imagenEvent{
+            width: 100%;
+            height: auto;
+        }
+
+        &__contenido{
+            background-color: #67beae;
+        }
+
+        &__lista{
+            list-style-type: none;
+            display: flex;
+            background-color: rgb(148, 147, 147);
+        }
+
+        &item{
+            color: rgb(242, 243, 243);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        &parrafo{
+            color: rgb(238, 238, 238);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+
+    .cardCuatro{
+        background-color: #201e1f;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        padding: 0%;
+        
+
+        &__subtituloTexto{
+            font-style: oblique;
+            font-size: 20px; 
+            text-align: center;  
+        }
+
+        &__imagenEvent{
+            width: 100%;
+            height: auto;
+        }
+
+        &__contenido{
+            background-color: #67beae;
+        }
+
+        &__lista{
+            list-style-type: none;
+            display: flex;
+            background-color: rgb(148, 147, 147);
+        }
+
+        &item{
+            color: rgb(242, 243, 243);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        &parrafo{
+            color: rgb(238, 238, 238);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+
+    .cardCinco{
+        background-color: #201e1f;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 0%;
+        
+
+        &__subtituloTexto{
+            font-style: oblique;
+            font-size: 20px; 
+            text-align: center;  
+        }
+
+        &__imagenEvent{
+            width: 100%;
+            height: auto;
+        }
+
+        &__contenido{
+            background-color: #67beae;
+        }
+
+        &__lista{
+            list-style-type: none;
+            display: flex;
+            background-color: rgb(148, 147, 147);
+        }
+
+        &item{
+            color: rgb(242, 243, 243);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        &parrafo{
+            color: rgb(238, 238, 238);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+
+    .cardSeis{
+        background-color: #201e1f;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 0%;
+        
+
+        &__subtituloTexto{
+            font-style: oblique;
+            font-size: 20px; 
+            text-align: center;  
+        }
+
+        &__imagenEvent{
+            width: 100%;
+            height: auto;
+        }
+
+        &__contenido{
+            background-color: #67beae;
+        }
+
+        &__lista{
+            list-style-type: none;
+            display: flex;
+            background-color: rgb(148, 147, 147);
+        }
+
+        &item{
+            color: rgb(242, 243, 243);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        &parrafo{
+            color: rgb(238, 238, 238);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+
+    .cardSiete{
+        background-color: #201e1f;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 0%;
+        
+
+        &__subtituloTexto{
+            font-style: oblique;
+            font-size: 20px; 
+            text-align: center;  
+        }
+
+        &__imagenEvent{
+            width: 100%;
+            height: auto;
+        }
+
+        &__contenido{
+            background-color: #67beae;
+        }
+
+        &__lista{
+            list-style-type: none;
+            display: flex;
+            background-color: rgb(148, 147, 147);
+        }
+
+        &item{
+            color: rgb(242, 243, 243);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        &parrafo{
+            color: rgb(238, 238, 238);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+
+    .cardOcho{
+        background-color: #201e1f;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 0%;
+        
+
+        &__subtituloTexto{
+            font-style: oblique;
+            font-size: 20px; 
+            text-align: center;  
+        }
+
+        &__imagenEvent{
+            width: 100%;
+            height: auto;
+        }
+
+        &__contenido{
+            background-color: #67beae;
+        }
+
+        &__lista{
+            list-style-type: none;
+            display: flex;
+            background-color: rgb(148, 147, 147);
+        }
+
+        &item{
+            color: rgb(242, 243, 243);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        &parrafo{
+            color: rgb(238, 238, 238);
+            font-weight: normal;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+   
+
+    .cuadro{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5; 
+    }
+
+    
+    /* mixins */
+
+    @mixin estilotitulos ( $color, $tamaño ) {
+        color: $color;
+        font-style: normal;
+        font-weight: bolder;
+        font-size: $tamaño;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    h2 {
+       @include estiloTitulos(grey, 30px)
+      }
+
+      h3{
+          @include estiloTitulos(#01a89a, 25px)
+      }
+
+      h4{
+          @include estiloTitulos(rgb(27, 27, 27), 18px)
+      }
+
+      /* extend */
+
+      .estiloTextos{
+          font-size: 20px;
+          font-weight: bold;
+          background-color: #c7c7c7 ;
+          font-family: 'Montserrat', sans-serif;
+          color: grey
+      }
+
+      .estiloParrafos{
+          @extend.estiloTextos;
+          font-size: 15px;
+          color: #e6e6e6 ;
+          font-weight: lighter;
+      }
